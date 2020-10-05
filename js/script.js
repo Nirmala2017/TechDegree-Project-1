@@ -1,6 +1,6 @@
 // An array of objects to hold  quotes.
 
-Const quotes = [
+const quotes = [
     {Quote:'People say nothing is impossible but I do not every day', 
      source: 'A.A.Milne',
     citation: '',
@@ -40,31 +40,25 @@ Const quotes = [
     // This a function to print quote 
 
     function printQuote(){
-        // This varaible holds the result of getRandomQuote function
-     
+     // This varaible holds the result of getRandomQuote function
         let getQuote = getRandomQuote(); 
-     
-        // string to hold quote object properties
 
-     let resultRandomQuote = 
-     '<p class="quote">${getQuote.Quote}</p>     <p class="source">${getQuote.source}</p>';
-     
-       
-     
-
-
-     // conditional statement to print object properties if available like citation and year
+                // string to hold quote object properties
+        let resultRandomQuote = 
+     '<p class="quote">${getQuote.Quote}</p><p class="source">${getQuote.source}</p>';
+          
+          // conditional statement to print object properties if available like citation and year
 
      if(getQuote.citation ){
 
         resultRandomQuote +=
-               <span class="year">$ {getQuote.year} </span>
-           
+               <span class="year">$ {getQuote.year} </span>;
+
            
      }
-     else if (getQuote.citation){
+      if (getQuote.citation){
         resultRandomQuote +=
-        <span class="citation">$ {getQuote.citation} </span>
+        <span class="citation">$ {getQuote.citation} </span>;
      }
 
      document.getElementById('quote-box').innerHTML = resultRandomQuote;
