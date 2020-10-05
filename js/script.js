@@ -54,34 +54,26 @@ const quotes = [
 
         </p>`  
      }
-      else if (getQuote.citation  !=getQuote.year){
+       if (getQuote.citation ){
         resultRandomQuote = 
         `<p class="quote">${getQuote.quote}</p>  
            <p class="source">${getQuote.source}        
               <span class="citation">${getQuote.citation}</span>
               </p>`
      }
-     else if (getQuote.year != getQuote.citation){
+      if (getQuote.year ){
         resultRandomQuote = 
         `<p class="quote">${getQuote.quote}</p>  
            <p class="source">${getQuote.source}        
-              <span class="citation">${getQuote.year}</span>
+              <span class="year">${getQuote.year}</span>
               </p>`
      }
-     else {
-        resultRandomQuote = 
-        `<p class="quote">${getQuote.quote}</p>  
-           <p class="source">${getQuote.source}</p>'
-        
-     }
-
+     
      document.getElementById('quote-box').innerHTML = resultRandomQuote;
      
      return document.getElementById('quote-box').innerHTML = resultRandomQuote;
     }
-
-
-    
+ 
 
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
