@@ -1,7 +1,7 @@
 // An array of objects to hold  quotes.
 
 const quotes = [
-    {Quote:'People say nothing is impossible but I do not every day', 
+    {Quote:'People say nothing is impossible but I do nothing every day', 
      source: 'A.A.Milne',
     citation: '',
      year:''},
@@ -45,20 +45,21 @@ const quotes = [
 
                 // string to hold quote object properties
         let resultRandomQuote = 
-     '<p class="quote">${getQuote.Quote}</p><p class="source">${getQuote.source}</p>';
+     `<p class="quote">${getQuote.Quote}</p>  
+        <p class="source">${getQuote.source}</p>`;
           
           // conditional statement to print object properties if available like citation and year
 
      if(getQuote.citation ){
 
         resultRandomQuote +=
-               <span class="year">$ {getQuote.year} </span>;
+               `<span class="year">${getQuote.year} </span>`;
 
            
      }
       if (getQuote.citation){
         resultRandomQuote +=
-        <span class="citation">$ {getQuote.citation} </span>;
+        `<span class="citation">${getQuote.citation} </span>`;
      }
 
      document.getElementById('quote-box').innerHTML = resultRandomQuote;
