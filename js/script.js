@@ -18,13 +18,13 @@ const quotes = [
 
     {quote:'The difference between stupidity and genius is that genius has its limits', 
      source: 'Albert Einstein',
-     citation: 'Google',
+     citation: '',
      year:''},
 
     {quote: 'It would be nice to spend billions on schools and roads, but right now that money is desperately needed for political ads', 
     source: 'Andy Borowitz',
-     citation: 'Google',
-      year: '2000'}
+     citation: '',
+      year: ''}
     ];
 
     // This a function to get a random quote 
@@ -45,17 +45,8 @@ const quotes = [
 
                 
        // Conditional statement to display object properties   
-     if(getQuote.citation && getQuote.year){
-        let resultRandomQuote = 
-        `<p class="quote">${getQuote.quote}</p>  
-           <p class="source">${getQuote.source}        
-              <span class="citation">${getQuote.citation}</span>
-              <span class="year">${getQuote.year} </span>
-
-        </p>`  
-     }
        if (getQuote.citation ){
-        resultRandomQuote = 
+        let resultRandomQuote = 
         `<p class="quote">${getQuote.quote}</p>  
            <p class="source">${getQuote.source}        
               <span class="citation">${getQuote.citation}</span>
